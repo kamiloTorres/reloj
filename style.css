@@ -1,6 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family-Poppins:200,300,400,500,600,700,800,900&display=swap');
-
-*
+@import url('http://fonts.googleapis.com/css?family-Poppins:200,300,400,500,600,700,800,900&display=swap');*
 {
     margin: 0;
     padding: 0;
@@ -13,21 +11,34 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
-background: #2f363e;
+background: #000000;
 }
-
+.titulo{
+    font-size: calc(5px + 9vh);
+    margin-top: -30px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px #000000, 0 0 15px #000000, 0 0 20px #0a0a0a, 0 0 40px #ffa500, 0 0 60px #000000, 0 0 10px #ff8d00, 0 0 98px #000000;
+    color: #fffdfd;
+    font-family: "Sacramento", cursive;
+    text-align: center;
+    -webkit-animation: pulsate-bck 1s ease-in-out infinite both;
+  animation: pulsate-bck 1s ease-in-out infinite both;
+  }
+  
+  
+  
 .container {
      position: relative;
      background: #2f363e;
-     /*min-height: 500px;*/
+
      border-radius: 20px;
-     border-top-left-radius: 225px;
-     border-top-right-radius: 225px;
-     box-shadow: 25px 25px 75px rgba(0,0,0,0.75),
-     10px 10px 70px rgba(0,0,0,0.25),
-     inset 5px 5px 10px rgba(0,0,0,0.5),
-     inset 5px 5px 10px rgba(225,255,255,0.2),
-     inset -5px -5px 15px rgba(0,0,0,0.75);
+     border-top-left-radius: 220px;
+     border-top-right-radius: 220px;
+     box-shadow: 10px 10px 40px rgba(255, 125, 39, 0.75),
+     10px 10px 40px rgba(255, 125, 39, 0.75),
+     inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+     inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+     inset -5px -5px 15px rgba(0, 0, 0, 0.75);
      display: flex;
      justify-content: center;
      align-items: center;
@@ -42,7 +53,7 @@ background: #2f363e;
      border-radius: 50%;
      box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
      inset 5px 5px 10px rgba(0,0,0,0.5),
-     inset 5px 5px 10px rgba(225,255,255,0.2),
+     inset 5px 5px 10px rgba(0, 0, 0, 0.2),
      inset -5px -5px 15px rgba(0,0,0,0.75);
      display: flex;
      justify-content: center;
@@ -144,11 +155,14 @@ background: #2f363e;
     color: var(--clr);
 }
 #tiempo div:nth-child(1)::after,
-#tiempo div:nth-child(2)::after{
+#tiempo div:nth-child(2)::after
+
+{
     content: ':';
     position: absolute;
     right: -4px;
 }
+
 #tiempo div:last-child{
     font-size: 0.5em;
     display: flex;
@@ -157,7 +171,7 @@ background: #2f363e;
     color: #fff;
 }
 
-/*animacion de los dos puntos*/
+/* ----------- ANIMACION DE LOS DOS PUNTOS ----------------- */
 #tiempo div:nth-child(2)::after{
     animation: animate 1s steps(1) infinite;
 }
@@ -169,4 +183,34 @@ background: #2f363e;
 
     }
 }
-/*animacion de los dos puntos*/
+/* ----------- ANIMACION DE LOS DOS PUNTOS ----------------- */
+  /* ----------- ANIMACION DEL TITULO ----------------- */
+@-webkit-keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  /* ----------- ANIMACION DEL TITULO ----------------- */
